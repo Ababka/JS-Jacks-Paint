@@ -19,18 +19,13 @@ function removeOpacity(event) {
         this.classList.remove('dim');
     }
 
-    let element = document.getElementById('ppg');
+    let element = document.getElementById('color-price');
         element.textContent = '';
         
-    let color = document.getElementById('color');
+    let color = document.getElementById('color-name');
         color.textContent = ''; 
 
     event.preventDefault();    
-}
-
-function changeImage(elementId) {
-    let image = document.getElementById('imgDisplay');
-    image.src = elementId.src;
 }
 
 function getProductInfo(partNumber) {
@@ -88,10 +83,10 @@ function getProductInfo(partNumber) {
 
     function updatePrice(colorName, price)
     {       
-        let ppg = document.getElementById('ppg');
-        ppg.textContent = price;
+        let colorPrice = document.getElementById('color-price');
+        colorPrice.textContent = price;
         
-        let color = document.getElementById('color');
+        let color = document.getElementById('color-name');
         color.textContent = colorName;
     }
     
